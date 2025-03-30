@@ -1,0 +1,25 @@
+cd Courses
+
+cd profiles-rest-api
+
+git init
+
+#after creating .git / .gitignore / LICENCE files
+git add .
+git commit -am "comment"
+
+##Pushing to git
+
+ls ~/.ssh #check key
+ssh-keygen -t rsa -b 4096 -C "comment" # create key 
+#enter for default
+#give passphrase for additionall security
+#check key using ls ~/.ssh 
+
+#go on git and add key there
+cat ~/.ssh/rsa_id.pub
+
+#create new project (repository)
+git remote add origin https://github.com/shantanuD1999/REST-API.git
+git branch -M main
+git push -u origin main
